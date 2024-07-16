@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HealthCare Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+  <header class="container">
+    <div class="container-logo">
+      <img src="assets/images/logo/TestLogo.svg" alt="TestLogo" />
+    </div>
+    <div class="container-nav">
+      <ul class="flex">
+        <li class="flex">
+          <img src="assets/images/icon/home.svg" alt="home" />
+          <a href="#">Overview</a>
+        </li>
+        <li class="flex">
+          <img src="assets/images/icon/group.svg" alt="group" />
+          <a href="#">Patients</a>
+        </li>
+        <li class="flex">
+          <img src="assets/images/icon/calendar.svg" alt="calendar" />
+          <a href="#">Schedule</a>
+        </li>
+        <li class="flex">
+          <img src="assets/images/icon/message.svg" alt="message" />
+          <a href="#">Message</a>
+        </li>
+        <li class="flex">
+          <img src="assets/images/icon/transaction.svg" alt="transaction" />
+          <a href="#">Transactions</a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex container-profile">
+      <div class="avatar-view">
+        <img src="assets/images/avatar/avatar.png" alt="avatar" />
+        <div class="avatar-info">
+          <p>Dr.Jose Simmons</p>
+          <p>General Practioner</p>
+        </div>
+      </div>
+      <div class="flex">
+        <input class="btn btn-setting" type="button"></input>
+        <input class="btn btn-more" type="button"></input>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container container-patient" id="patient_list_panel">
+      <div class="flex container-header">
+        <h2>Patients</h2>
+        <input type="button" class="btn btn-search" />
+      </div>
+      <div class="patient-scroll" id="patient_scroll">
+      </div>
+    </div>
+    <div class="diagnosis-view" id="diagnosis_view">
+      <div class="container container-history">
+        <div class="flex container-header">
+          <h2>Diagnosis History</h2>
+        </div>
+        <div class="container-small container-graph">
+          <div class="graph-view" id="blood_pressure_graph">
+          </div>
+          <div class="graph-info" id="blood_pressure_info"></div>
+        </div>
+        <div class="flex container-parameter">
+          <div class="container-small container-respiratory" id="respiratory_info">
+          </div>
+          <div class="container-small container-temperature" id="temperature_info">
+          </div>
+          <div class="container-small container-heart" id="heart_rate_info">
+          </div>
+        </div>
+      </div>
+      <div class="container container-list">
+        <div class="flex container-header">
+          <h2>Diagnostic List</h2>
+        </div>
+        <div class="tableFixHead">
+          <div class="table-header">
+            <p>Problem/Diagnosis</p>
+            <p>Description</p>
+            <p>Status</p>
+          </div>
+          <div class="table-body">
+            <table>
+              <tbody id="diagnostic_list_body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="selected-patient-view" id="selected_patient_view">
+      <div class="container container-selected-patient" id="selected_patient_avatar">
+      </div>
+      <div class="container container-result">
+        <div class="flex container-header">
+          <h2>Lab Results</h2>
+        </div>
+        <div class="result-scroll" id="lab_result_list">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+</body>
+</html>
